@@ -1,14 +1,19 @@
-# C++ Vector Duplicate Removal (Educational Code)
+C++ Vector Duplicate Removal (Educational Example)
 
-This is a simple **educational C++ code** that demonstrates how to remove duplicate values from a vector using `std::unique`.  
+Hi 👋  
+This is just a small educational C++ example I wrote to show how you can remove duplicate values from a vector using `std::unique`.  
 
-I hope this example helps you in your learning journey with C++. 🚀
+I made it simple on purpose so it’s easy to follow. Hopefully it helps you if you’re studying C++ or just trying to understand how `std::unique` works.  
 
-## Features
-- Shows vector before and after removing duplicates  
-- Uses `std::unique` with a custom comparison function  
-- Displays size before and after cleanup  
+What it does
+- Prints the vector before and after removing duplicates  
+- Uses a custom comparison function with `std::unique`  
+- Shows the size of the vector before and after  
 
-## Note
-`std::unique` only removes **consecutive duplicates**.  
-To fully remove all duplicates, you need to sort the vector first.
+Note
+Keep in mind that `std::unique` only removes **consecutive duplicates**.  
+If you want to remove all duplicates, you need to sort the vector first.  
+
+---
+
+I hope this little code helps you out 🙂  
