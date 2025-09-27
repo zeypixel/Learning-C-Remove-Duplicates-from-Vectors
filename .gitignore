@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <algorithm> // algorithm functions like unique (behavior may differ by compiler)
+
+using namespace std;
+
+bool match(int n1, int n2) {
+    return n1 == n2; // check if equal
+}
+
+int main()
+{
+    // the fun will delete one of the repeat values
+    vector<int> data = { 9,1,1,2,3,3,2,5,12,12 };
+
+    // print before
+    for (auto it = data.begin(); it != data.end(); it++)
+        cout << *it << " ";
+    cout << "\n";
+
+    cout << "BF SIZE : " << data.size() << endl; // before size
+
+    // remove consecutive duplicates (may work differently on different compilers)
+    auto new_end = unique(data.begin(), data.end(), match);
+
+    // shrink vector to new size
+    data.resize(distance(data.begin(), new_end));
+
+    // print after
+    for (auto it = data.begin(); it != data.end(); it++)
+        cout << *it << " ";
+    cout << "\n";
+
+    cout << "AF SIZE : " << data.size() << endl; // after size
+
+    // print final again
+    for (auto it = data.begin(); it != data.end(); it++)
+        cout << *it << " ";
+    cout << "\n";
+
+    cout << "AF ALL SIZE : " << data.size() << endl; // after all size
+
+    return 0;
+}
